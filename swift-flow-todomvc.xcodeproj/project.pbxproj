@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05721C490908009BDAE9 /* AppDelegate.swift */; };
+		EF4D05751C490908009BDAE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05741C490908009BDAE9 /* ViewController.swift */; };
+		EF4D05781C490908009BDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05761C490908009BDAE9 /* Main.storyboard */; };
+		EF4D057A1C490908009BDAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05791C490908009BDAE9 /* Assets.xcassets */; };
+		EF4D057D1C490908009BDAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */; };
+		EF4D05881C490908009BDAE9 /* swift_flow_todomvcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05871C490908009BDAE9 /* swift_flow_todomvcTests.swift */; };
+		EF4D05931C490908009BDAE9 /* swift_flow_todomvcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05921C490908009BDAE9 /* swift_flow_todomvcUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF4D05841C490908009BDAE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4D05671C490908009BDAE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4D056E1C490908009BDAE9;
+			remoteInfo = "swift-flow-todomvc";
+		};
+		EF4D058F1C490908009BDAE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4D05671C490908009BDAE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4D056E1C490908009BDAE9;
+			remoteInfo = "swift-flow-todomvc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF4D056F1C490908009BDAE9 /* swift-flow-todomvc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-flow-todomvc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4D05721C490908009BDAE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF4D05741C490908009BDAE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF4D05771C490908009BDAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF4D05791C490908009BDAE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF4D057C1C490908009BDAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF4D057E1C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4D05831C490908009BDAE9 /* swift-flow-todomvcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-flow-todomvcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4D05871C490908009BDAE9 /* swift_flow_todomvcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_flow_todomvcTests.swift; sourceTree = "<group>"; };
+		EF4D05891C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4D058E1C490908009BDAE9 /* swift-flow-todomvcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-flow-todomvcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4D05921C490908009BDAE9 /* swift_flow_todomvcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_flow_todomvcUITests.swift; sourceTree = "<group>"; };
+		EF4D05941C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF4D056C1C490908009BDAE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4D05801C490908009BDAE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4D058B1C490908009BDAE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF4D05661C490908009BDAE9 = {
+			isa = PBXGroup;
+			children = (
+				EF4D05711C490908009BDAE9 /* swift-flow-todomvc */,
+				EF4D05861C490908009BDAE9 /* swift-flow-todomvcTests */,
+				EF4D05911C490908009BDAE9 /* swift-flow-todomvcUITests */,
+				EF4D05701C490908009BDAE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF4D05701C490908009BDAE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D056F1C490908009BDAE9 /* swift-flow-todomvc.app */,
+				EF4D05831C490908009BDAE9 /* swift-flow-todomvcTests.xctest */,
+				EF4D058E1C490908009BDAE9 /* swift-flow-todomvcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF4D05711C490908009BDAE9 /* swift-flow-todomvc */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05721C490908009BDAE9 /* AppDelegate.swift */,
+				EF4D05741C490908009BDAE9 /* ViewController.swift */,
+				EF4D05761C490908009BDAE9 /* Main.storyboard */,
+				EF4D05791C490908009BDAE9 /* Assets.xcassets */,
+				EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */,
+				EF4D057E1C490908009BDAE9 /* Info.plist */,
+			);
+			path = "swift-flow-todomvc";
+			sourceTree = "<group>";
+		};
+		EF4D05861C490908009BDAE9 /* swift-flow-todomvcTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05871C490908009BDAE9 /* swift_flow_todomvcTests.swift */,
+				EF4D05891C490908009BDAE9 /* Info.plist */,
+			);
+			path = "swift-flow-todomvcTests";
+			sourceTree = "<group>";
+		};
+		EF4D05911C490908009BDAE9 /* swift-flow-todomvcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05921C490908009BDAE9 /* swift_flow_todomvcUITests.swift */,
+				EF4D05941C490908009BDAE9 /* Info.plist */,
+			);
+			path = "swift-flow-todomvcUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF4D056E1C490908009BDAE9 /* swift-flow-todomvc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4D05971C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvc" */;
+			buildPhases = (
+				EF4D056B1C490908009BDAE9 /* Sources */,
+				EF4D056C1C490908009BDAE9 /* Frameworks */,
+				EF4D056D1C490908009BDAE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swift-flow-todomvc";
+			productName = "swift-flow-todomvc";
+			productReference = EF4D056F1C490908009BDAE9 /* swift-flow-todomvc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF4D05821C490908009BDAE9 /* swift-flow-todomvcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4D059A1C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvcTests" */;
+			buildPhases = (
+				EF4D057F1C490908009BDAE9 /* Sources */,
+				EF4D05801C490908009BDAE9 /* Frameworks */,
+				EF4D05811C490908009BDAE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF4D05851C490908009BDAE9 /* PBXTargetDependency */,
+			);
+			name = "swift-flow-todomvcTests";
+			productName = "swift-flow-todomvcTests";
+			productReference = EF4D05831C490908009BDAE9 /* swift-flow-todomvcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF4D058D1C490908009BDAE9 /* swift-flow-todomvcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4D059D1C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvcUITests" */;
+			buildPhases = (
+				EF4D058A1C490908009BDAE9 /* Sources */,
+				EF4D058B1C490908009BDAE9 /* Frameworks */,
+				EF4D058C1C490908009BDAE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF4D05901C490908009BDAE9 /* PBXTargetDependency */,
+			);
+			name = "swift-flow-todomvcUITests";
+			productName = "swift-flow-todomvcUITests";
+			productReference = EF4D058E1C490908009BDAE9 /* swift-flow-todomvcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF4D05671C490908009BDAE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Paul-Henri Koeck";
+				TargetAttributes = {
+					EF4D056E1C490908009BDAE9 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					EF4D05821C490908009BDAE9 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = EF4D056E1C490908009BDAE9;
+					};
+					EF4D058D1C490908009BDAE9 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = EF4D056E1C490908009BDAE9;
+					};
+				};
+			};
+			buildConfigurationList = EF4D056A1C490908009BDAE9 /* Build configuration list for PBXProject "swift-flow-todomvc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF4D05661C490908009BDAE9;
+			productRefGroup = EF4D05701C490908009BDAE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF4D056E1C490908009BDAE9 /* swift-flow-todomvc */,
+				EF4D05821C490908009BDAE9 /* swift-flow-todomvcTests */,
+				EF4D058D1C490908009BDAE9 /* swift-flow-todomvcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF4D056D1C490908009BDAE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4D057D1C490908009BDAE9 /* LaunchScreen.storyboard in Resources */,
+				EF4D057A1C490908009BDAE9 /* Assets.xcassets in Resources */,
+				EF4D05781C490908009BDAE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4D05811C490908009BDAE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4D058C1C490908009BDAE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF4D056B1C490908009BDAE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4D05751C490908009BDAE9 /* ViewController.swift in Sources */,
+				EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4D057F1C490908009BDAE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4D05881C490908009BDAE9 /* swift_flow_todomvcTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4D058A1C490908009BDAE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4D05931C490908009BDAE9 /* swift_flow_todomvcUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF4D05851C490908009BDAE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4D056E1C490908009BDAE9 /* swift-flow-todomvc */;
+			targetProxy = EF4D05841C490908009BDAE9 /* PBXContainerItemProxy */;
+		};
+		EF4D05901C490908009BDAE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4D056E1C490908009BDAE9 /* swift-flow-todomvc */;
+			targetProxy = EF4D058F1C490908009BDAE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF4D05761C490908009BDAE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF4D05771C490908009BDAE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF4D057C1C490908009BDAE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF4D05951C490908009BDAE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF4D05961C490908009BDAE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF4D05981C490908009BDAE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "swift-flow-todomvc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.swift-flow-todomvc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF4D05991C490908009BDAE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "swift-flow-todomvc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.swift-flow-todomvc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF4D059B1C490908009BDAE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "swift-flow-todomvcTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.swift-flow-todomvcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-flow-todomvc.app/swift-flow-todomvc";
+			};
+			name = Debug;
+		};
+		EF4D059C1C490908009BDAE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "swift-flow-todomvcTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.swift-flow-todomvcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-flow-todomvc.app/swift-flow-todomvc";
+			};
+			name = Release;
+		};
+		EF4D059E1C490908009BDAE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "swift-flow-todomvcUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.swift-flow-todomvcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "swift-flow-todomvc";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EF4D059F1C490908009BDAE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "swift-flow-todomvcUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.swift-flow-todomvcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "swift-flow-todomvc";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF4D056A1C490908009BDAE9 /* Build configuration list for PBXProject "swift-flow-todomvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4D05951C490908009BDAE9 /* Debug */,
+				EF4D05961C490908009BDAE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4D05971C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4D05981C490908009BDAE9 /* Debug */,
+				EF4D05991C490908009BDAE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF4D059A1C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4D059B1C490908009BDAE9 /* Debug */,
+				EF4D059C1C490908009BDAE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF4D059D1C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4D059E1C490908009BDAE9 /* Debug */,
+				EF4D059F1C490908009BDAE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF4D05671C490908009BDAE9 /* Project object */;
+}
