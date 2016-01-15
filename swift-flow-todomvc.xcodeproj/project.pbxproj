@@ -18,6 +18,7 @@
 		EF4D05A91C490C92009BDAE9 /* TodoActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05A81C490C92009BDAE9 /* TodoActions.swift */; };
 		EF4D05AB1C490D70009BDAE9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05AA1C490D70009BDAE9 /* Store.swift */; };
 		EF4D05AD1C490DE9009BDAE9 /* TodosReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05AC1C490DE9009BDAE9 /* TodosReducer.swift */; };
+		EF4D05AF1C4915E8009BDAE9 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05AE1C4915E8009BDAE9 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EF4D05A81C490C92009BDAE9 /* TodoActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoActions.swift; path = "swift-flow/Actions/TodoActions.swift"; sourceTree = "<group>"; };
 		EF4D05AA1C490D70009BDAE9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = "swift-flow/Store/Store.swift"; sourceTree = "<group>"; };
 		EF4D05AC1C490DE9009BDAE9 /* TodosReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosReducer.swift; path = "swift-flow/Reducers/TodosReducer.swift"; sourceTree = "<group>"; };
+		EF4D05AE1C4915E8009BDAE9 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = "swift-flow/Store/AppState.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4D05AA1C490D70009BDAE9 /* Store.swift */,
+				EF4D05AE1C4915E8009BDAE9 /* AppState.swift */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				EF4D05AD1C490DE9009BDAE9 /* TodosReducer.swift in Sources */,
 				EF4D05A71C490AB9009BDAE9 /* TodosViewController.swift in Sources */,
 				EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */,
+				EF4D05AF1C4915E8009BDAE9 /* AppState.swift in Sources */,
 				EF4D05A91C490C92009BDAE9 /* TodoActions.swift in Sources */,
 				EF4D05AB1C490D70009BDAE9 /* Store.swift in Sources */,
 			);
