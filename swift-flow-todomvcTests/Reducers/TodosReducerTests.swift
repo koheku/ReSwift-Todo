@@ -25,6 +25,8 @@ class TodosReducerTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    // MARK: ADD_TODO
 
     func testAddingOneTodoToEmptyState() {
         // Given
@@ -60,5 +62,35 @@ class TodosReducerTests: XCTestCase {
         
         // Then
         XCTAssertEqual(result.todosState.todos, todos + [Todo(text: "todo 3", completed: false, id: 2)])
+    }
+    
+    // MARK: DELETE_TODO
+    
+    func testDeletingOneTodoFromTwoTodos() {
+        // Given
+        let todos = [Todo(text: "todo 1", completed: true, id: 0), Todo(text: "todo 2", completed: false, id: 1)]
+        let deleteTodo = DeleteTodo(id: 0)
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: deleteTodo)
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos, [Todo(text: "todo 2", completed: false, id: 1)])
+    }
+    
+    // MARK: EDIT_TODO
+    
+    func testEditingOneTodo() {
+        // Given
+        let todos = [Todo(text: "todo 1", completed: true, id: 0), Todo(text: "todo 2", completed: false, id: 1)]
+        let editTodo = EditTodo(id: 0, text: "todo 1 was edited")
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: editTodo)
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos,
+            [Todo(text: "todo 1 was edited", completed: true, id: 0),
+                Todo(text: "todo 2", completed: false, id: 1)])
     }
 }

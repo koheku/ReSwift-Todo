@@ -23,7 +23,7 @@ struct DeleteTodo: Action {
 struct EditTodo: Action {
     
     static let type = "EDIT_TODO"
-    let id: String
+    let id: Int
     let text: String
 }
 
