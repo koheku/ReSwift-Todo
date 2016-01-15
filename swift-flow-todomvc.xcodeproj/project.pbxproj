@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		074BDC7221FF7A4CF8AB8F64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593F7237DF492B273E39E88A /* Pods.framework */; };
 		EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05721C490908009BDAE9 /* AppDelegate.swift */; };
-		EF4D05751C490908009BDAE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05741C490908009BDAE9 /* ViewController.swift */; };
 		EF4D05781C490908009BDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05761C490908009BDAE9 /* Main.storyboard */; };
 		EF4D057A1C490908009BDAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05791C490908009BDAE9 /* Assets.xcassets */; };
 		EF4D057D1C490908009BDAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */; };
 		EF4D05881C490908009BDAE9 /* swift_flow_todomvcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05871C490908009BDAE9 /* swift_flow_todomvcTests.swift */; };
 		EF4D05931C490908009BDAE9 /* swift_flow_todomvcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05921C490908009BDAE9 /* swift_flow_todomvcUITests.swift */; };
+		EF4D05A71C490AB9009BDAE9 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05A61C490AB9009BDAE9 /* TodosViewController.swift */; };
+		EF4D05A91C490C92009BDAE9 /* TodoActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05A81C490C92009BDAE9 /* TodoActions.swift */; };
+		EF4D05AB1C490D70009BDAE9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05AA1C490D70009BDAE9 /* Store.swift */; };
+		EF4D05AD1C490DE9009BDAE9 /* TodosReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05AC1C490DE9009BDAE9 /* TodosReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 		9A86C126FA1335645DE4D49F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF4D056F1C490908009BDAE9 /* swift-flow-todomvc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-flow-todomvc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D05721C490908009BDAE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF4D05741C490908009BDAE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF4D05771C490908009BDAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF4D05791C490908009BDAE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF4D057C1C490908009BDAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		EF4D058E1C490908009BDAE9 /* swift-flow-todomvcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-flow-todomvcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D05921C490908009BDAE9 /* swift_flow_todomvcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_flow_todomvcUITests.swift; sourceTree = "<group>"; };
 		EF4D05941C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4D05A61C490AB9009BDAE9 /* TodosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosViewController.swift; path = "swift-flow/View/TodosViewController.swift"; sourceTree = "<group>"; };
+		EF4D05A81C490C92009BDAE9 /* TodoActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoActions.swift; path = "swift-flow/Actions/TodoActions.swift"; sourceTree = "<group>"; };
+		EF4D05AA1C490D70009BDAE9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = "swift-flow/Store/Store.swift"; sourceTree = "<group>"; };
+		EF4D05AC1C490DE9009BDAE9 /* TodosReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosReducer.swift; path = "swift-flow/Reducers/TodosReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				EF4D05721C490908009BDAE9 /* AppDelegate.swift */,
-				EF4D05741C490908009BDAE9 /* ViewController.swift */,
-				EF4D05761C490908009BDAE9 /* Main.storyboard */,
 				EF4D05791C490908009BDAE9 /* Assets.xcassets */,
-				EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */,
 				EF4D057E1C490908009BDAE9 /* Info.plist */,
+				EF4D05A41C490A27009BDAE9 /* swift-flow */,
 			);
 			path = "swift-flow-todomvc";
 			sourceTree = "<group>";
@@ -147,6 +151,59 @@
 				EF4D05941C490908009BDAE9 /* Info.plist */,
 			);
 			path = "swift-flow-todomvcUITests";
+			sourceTree = "<group>";
+		};
+		EF4D05A01C490A11009BDAE9 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05A81C490C92009BDAE9 /* TodoActions.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		EF4D05A11C490A17009BDAE9 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05AC1C490DE9009BDAE9 /* TodosReducer.swift */,
+			);
+			name = Reducers;
+			sourceTree = "<group>";
+		};
+		EF4D05A21C490A1B009BDAE9 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Middleware;
+			sourceTree = "<group>";
+		};
+		EF4D05A31C490A20009BDAE9 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05AA1C490D70009BDAE9 /* Store.swift */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		EF4D05A41C490A27009BDAE9 /* swift-flow */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05A01C490A11009BDAE9 /* Actions */,
+				EF4D05A21C490A1B009BDAE9 /* Middleware */,
+				EF4D05A11C490A17009BDAE9 /* Reducers */,
+				EF4D05A31C490A20009BDAE9 /* Store */,
+				EF4D05A51C490A40009BDAE9 /* View */,
+			);
+			name = "swift-flow";
+			sourceTree = "<group>";
+		};
+		EF4D05A51C490A40009BDAE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05A61C490AB9009BDAE9 /* TodosViewController.swift */,
+				EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */,
+				EF4D05761C490908009BDAE9 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,8 +388,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4D05751C490908009BDAE9 /* ViewController.swift in Sources */,
+				EF4D05AD1C490DE9009BDAE9 /* TodosReducer.swift in Sources */,
+				EF4D05A71C490AB9009BDAE9 /* TodosViewController.swift in Sources */,
 				EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */,
+				EF4D05A91C490C92009BDAE9 /* TodoActions.swift in Sources */,
+				EF4D05AB1C490D70009BDAE9 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
