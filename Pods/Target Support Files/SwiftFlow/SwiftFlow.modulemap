@@ -1,0 +1,6 @@
+framework module SwiftFlow {
+  umbrella header "SwiftFlow-umbrella.h"
+
+  export *
+  module * { export * }
+}

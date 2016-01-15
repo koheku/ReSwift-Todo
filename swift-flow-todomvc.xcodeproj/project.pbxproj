@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074BDC7221FF7A4CF8AB8F64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593F7237DF492B273E39E88A /* Pods.framework */; };
 		EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05721C490908009BDAE9 /* AppDelegate.swift */; };
 		EF4D05751C490908009BDAE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05741C490908009BDAE9 /* ViewController.swift */; };
 		EF4D05781C490908009BDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05761C490908009BDAE9 /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		593F7237DF492B273E39E88A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B5D2F7D5205269086983B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9A86C126FA1335645DE4D49F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF4D056F1C490908009BDAE9 /* swift-flow-todomvc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-flow-todomvc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D05721C490908009BDAE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF4D05741C490908009BDAE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074BDC7221FF7A4CF8AB8F64 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A7E0A63B9EF95940BF0FA38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				593F7237DF492B273E39E88A /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AA44810B5154AEE812E726D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94B5D2F7D5205269086983B4 /* Pods.debug.xcconfig */,
+				9A86C126FA1335645DE4D49F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF4D05661C490908009BDAE9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				EF4D05861C490908009BDAE9 /* swift-flow-todomvcTests */,
 				EF4D05911C490908009BDAE9 /* swift-flow-todomvcUITests */,
 				EF4D05701C490908009BDAE9 /* Products */,
+				5AA44810B5154AEE812E726D /* Pods */,
+				3A7E0A63B9EF95940BF0FA38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF4D05971C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvc" */;
 			buildPhases = (
+				22A6D48B2472FB6B9357B4EB /* Check Pods Manifest.lock */,
 				EF4D056B1C490908009BDAE9 /* Sources */,
 				EF4D056C1C490908009BDAE9 /* Frameworks */,
 				EF4D056D1C490908009BDAE9 /* Resources */,
+				E445DF90E696DFDC9E147476 /* Embed Pods Frameworks */,
+				8BE14719D2D57F4E27F2FF7E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22A6D48B2472FB6B9357B4EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE14719D2D57F4E27F2FF7E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E445DF90E696DFDC9E147476 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF4D056B1C490908009BDAE9 /* Sources */ = {
@@ -397,6 +472,7 @@
 		};
 		EF4D05981C490908009BDAE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B5D2F7D5205269086983B4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "swift-flow-todomvc/Info.plist";
@@ -408,6 +484,7 @@
 		};
 		EF4D05991C490908009BDAE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A86C126FA1335645DE4D49F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "swift-flow-todomvc/Info.plist";
@@ -484,6 +561,7 @@
 				EF4D05991C490908009BDAE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF4D059A1C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvcTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				EF4D059C1C490908009BDAE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF4D059D1C490908009BDAE9 /* Build configuration list for PBXNativeTarget "swift-flow-todomvcUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				EF4D059F1C490908009BDAE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

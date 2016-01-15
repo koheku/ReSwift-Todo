@@ -1,0 +1,10 @@
+PODS:
+  - SwiftFlow (0.2.1)
+
+DEPENDENCIES:
+  - SwiftFlow
+
+SPEC CHECKSUMS:
+  SwiftFlow: 9e6d7d777c65e6601068cdb0628c3fa365a48d64
+
+COCOAPODS: 0.39.0
