@@ -28,9 +28,9 @@ class swift_flow_todomvcUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+//    func testExample() {
+//        // Use recording to get started writing UI tests.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
     
 }

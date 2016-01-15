@@ -8,8 +8,7 @@
 
 import SwiftFlow
 
-struct Todo {
-    let text: String
-    let completed: Bool
-    let id: Int
+struct AppState: StateType, HasTodosState {
+    var todosState = TodosState()
+    init() {}
 }
