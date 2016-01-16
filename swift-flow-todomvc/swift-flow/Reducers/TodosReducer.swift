@@ -26,14 +26,51 @@ struct TodosReducer: Reducer {
         case let action as EditTodo:
             state.todosState.todos = state.todosState.todos.map({ todo in
                 if (todo.id == action.id) {
-                    return Todo(text: action.text, completed: todo.completed, id: todo.id)
+                    var newTodo = todo
+                    newTodo.text = action.text
+                    return newTodo
                 }
                 return todo
             })
             return state
             
+        case let action as CompleteTodo:
+            state.todosState.todos = state.todosState.todos.map({ todo in
+                if (todo.id == action.id) {
+                    var newTodo = todo
+                    newTodo.completed = !todo.completed
+                    return newTodo
+                }
+                return todo
+            })
+            return state
+            
+        case _ as CompleteAll:
+            let areAllCompleted = todosAreAllCompleted(state.todosState.todos)
+            state.todosState.todos = state.todosState.todos.map({ (var todo) in
+                todo.completed = !areAllCompleted
+                return todo
+            })
+            return state
+            
+        case _ as ClearCompleted:
+            state.todosState.todos = state.todosState.todos.filter() { $0.completed == false }
+            return state
+            
         default:
             return state
         }
+    }
+    
+    func todosAreAllCompleted (todos: [Todo]) -> Bool {
+        
+        var areAllCompleted = true
+        for todo in todos {
+            if (todo.completed == false) {
+                areAllCompleted = false
+                break
+            }
+        }
+        return areAllCompleted
     }
 }

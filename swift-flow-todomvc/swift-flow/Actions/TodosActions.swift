@@ -30,7 +30,7 @@ struct EditTodo: Action {
 struct CompleteTodo: Action {
     
     static let type = "COMPLETE_TODO"
-    let id: String
+    let id: Int
 }
 
 struct CompleteAll: Action {

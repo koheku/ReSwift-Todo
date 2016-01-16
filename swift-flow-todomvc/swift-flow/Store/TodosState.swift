@@ -9,9 +9,9 @@
 import SwiftFlow
 
 struct Todo {
-    let text: String
-    let completed: Bool
-    let id: Int
+    var text: String
+    var completed: Bool
+    var id: Int
 }
 
 extension Todo: Equatable {}

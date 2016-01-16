@@ -93,4 +93,100 @@ class TodosReducerTests: XCTestCase {
             [Todo(text: "todo 1 was edited", completed: true, id: 0),
                 Todo(text: "todo 2", completed: false, id: 1)])
     }
+    
+    // MARK: COMPLETE_TODO
+    
+    func testCompleteOneUncompletedTodo() {
+        
+        // Given
+        let todos = [Todo(text: "todo 1", completed: false, id: 0), Todo(text: "todo 2", completed: false, id: 1)]
+        let completeTodo = CompleteTodo(id: 0)
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: completeTodo)
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos,
+            [Todo(text: "todo 1", completed: true, id: 0),
+                Todo(text: "todo 2", completed: false, id: 1)])
+        
+    }
+    
+    func testCompleteOneCompletedTodo() {
+        
+        // Given
+        let todos = [Todo(text: "todo 1", completed: true, id: 0), Todo(text: "todo 2", completed: false, id: 1)]
+        let completeTodo = CompleteTodo(id: 0)
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: completeTodo)
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos,
+            [Todo(text: "todo 1", completed: false, id: 0),
+                Todo(text: "todo 2", completed: false, id: 1)])
+        
+    }
+    
+    // MARK: COMPLETE_ALL
+    
+    func testMakeAllTodosCompleteWhenAtLeastOneTodoIsUncompleted() {
+        
+        // Given
+        let todos = [Todo(text: "todo 1", completed: false, id: 0), Todo(text: "todo 2", completed: true, id: 1)]
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: CompleteAll())
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos,
+            [Todo(text: "todo 1", completed: true, id: 0),
+                Todo(text: "todo 2", completed: true, id: 1)])
+        
+    }
+    
+    func testMakeAllTodosUncompleteWhenAllTodosAreCompleted() {
+        
+        // Given
+        let todos = [Todo(text: "todo 1", completed: true, id: 0), Todo(text: "todo 2", completed: true, id: 1)]
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: CompleteAll())
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos,
+            [Todo(text: "todo 1", completed: false, id: 0),
+                Todo(text: "todo 2", completed: false, id: 1)])
+        
+    }
+    
+    // MARK: CLEAR_COMPLETED
+    
+    func testClearCompletedRemovesCompletedTodos() {
+        
+        // Given
+        let todos = [Todo(text: "todo 1", completed: true, id: 0), Todo(text: "todo 2", completed: false, id: 1)]
+        
+        // When
+        let result = TodosReducer().handleAction(AppState(todos), action: ClearCompleted())
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos, [Todo(text: "todo 2", completed: false, id: 1)])
+    }
+    
+    func testShouldNotGenerateDuplicateIdsAterClearCompleted() {
+        
+        // Given
+        let todos = [Todo(text: "todo 1", completed: false, id: 0), Todo(text: "todo 2", completed: false, id: 1)]
+        let actions: [Action] = [CompleteTodo(id: 0), ClearCompleted(), AddTodo(text: "todo 3")]
+        
+        // When
+        let result = actions.reduce(AppState(todos), combine: TodosReducer().handleAction)
+        
+        // Then
+        XCTAssertEqual(result.todosState.todos,
+            [Todo(text: "todo 2", completed: false, id: 1),
+                Todo(text: "todo 3", completed: false, id: 2)])
+        
+    }
 }
