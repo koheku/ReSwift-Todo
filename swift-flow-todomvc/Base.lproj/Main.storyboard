@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Todos View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TodosViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodosViewController" id="BYZ-38-t0r" customClass="TodosViewController" customModule="swift_flow_todomvc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2l-Jn-RYq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="wNb-3l-aNI"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Todo List" id="ch5-b4-FqW">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Du9-DZ-SUa"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2c-fj-Huk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rwu-aN-OM6"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XH7-zs-4gK"/>
+                                    <barButtonItem style="plain" id="I02-mq-R5G">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="s4Q-Cd-93t">
+                                            <rect key="frame" x="159" y="7" width="281" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Second"/>
+                                                <segment title="Completed"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Pje-VS-JDe"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-uU-TiT">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b2l-Jn-RYq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0O9-yR-ZFH"/>
+                            <constraint firstItem="qdx-uU-TiT" firstAttribute="top" secondItem="m2c-fj-Huk" secondAttribute="bottom" id="93F-gO-tUd"/>
+                            <constraint firstItem="b2l-Jn-RYq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CpR-tE-cfd"/>
+                            <constraint firstItem="m2c-fj-Huk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="H5L-ra-JcK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qdx-uU-TiT" secondAttribute="bottom" id="X1v-4K-7XY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qdx-uU-TiT" secondAttribute="trailing" constant="-20" id="Zz6-Jb-qA6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m2c-fj-Huk" secondAttribute="trailing" constant="-20" id="bur-8d-GjL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b2l-Jn-RYq" secondAttribute="trailing" constant="-20" id="d5W-uf-PgF"/>
+                            <constraint firstItem="m2c-fj-Huk" firstAttribute="top" secondItem="b2l-Jn-RYq" secondAttribute="bottom" id="hB0-Bc-VLW"/>
+                            <constraint firstItem="qdx-uU-TiT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="wDM-3y-dmG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="Du9-DZ-SUa" id="wfK-LL-Hc2"/>
+                        <outlet property="segmentedControl" destination="s4Q-Cd-93t" id="xRN-1D-ksw"/>
+                        <outlet property="tableView" destination="qdx-uU-TiT" id="3Ef-fC-cph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304" y="445"/>
         </scene>
     </scenes>
 </document>

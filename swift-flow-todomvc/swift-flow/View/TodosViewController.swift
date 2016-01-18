@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import SwiftFlow
 
-class ViewController: UIViewController {
+class TodosViewController: UIViewController {
+    
+    var store: MainStore?
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        NSLog("self.store \(self.store)")
+        NSLog("self.store \(self.segmentedControl)")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
