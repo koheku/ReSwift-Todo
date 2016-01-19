@@ -31,19 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2l-Jn-RYq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="wNb-3l-aNI"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Todo List" id="ch5-b4-FqW">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Du9-DZ-SUa"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2c-fj-Huk">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="rwu-aN-OM6"/>
                                 </constraints>
@@ -64,7 +53,7 @@
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-uU-TiT">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="21b-as-5VM" style="IBUITableViewCellStyleDefault" id="XdQ-lZ-Dnj" customClass="TodoTableViewCell" customModule="swift_flow_todomvc" customModuleProvider="target">
@@ -89,20 +78,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b2l-Jn-RYq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0O9-yR-ZFH"/>
                             <constraint firstItem="qdx-uU-TiT" firstAttribute="top" secondItem="m2c-fj-Huk" secondAttribute="bottom" id="93F-gO-tUd"/>
-                            <constraint firstItem="b2l-Jn-RYq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CpR-tE-cfd"/>
                             <constraint firstItem="m2c-fj-Huk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="H5L-ra-JcK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qdx-uU-TiT" secondAttribute="bottom" id="X1v-4K-7XY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qdx-uU-TiT" secondAttribute="trailing" constant="-20" id="Zz6-Jb-qA6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m2c-fj-Huk" secondAttribute="trailing" constant="-20" id="bur-8d-GjL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b2l-Jn-RYq" secondAttribute="trailing" constant="-20" id="d5W-uf-PgF"/>
-                            <constraint firstItem="m2c-fj-Huk" firstAttribute="top" secondItem="b2l-Jn-RYq" secondAttribute="bottom" id="hB0-Bc-VLW"/>
+                            <constraint firstItem="m2c-fj-Huk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eUX-xg-XyX"/>
                             <constraint firstItem="qdx-uU-TiT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="wDM-3y-dmG"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="Du9-DZ-SUa" id="wfK-LL-Hc2"/>
                         <outlet property="segmentedControl" destination="s4Q-Cd-93t" id="xRN-1D-ksw"/>
                         <outlet property="tableView" destination="qdx-uU-TiT" id="3Ef-fC-cph"/>
                     </connections>

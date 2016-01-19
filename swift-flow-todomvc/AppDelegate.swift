@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let store = MainStore(reducer: TodosReducer(), appState: AppState())
         store.dispatch(AddTodo(text: "test"))
+        store.dispatch(AddTodo(text: "test"))
+        store.dispatch(AddTodo(text: "test"))
+        store.dispatch(AddTodo(text: "test"))
         todosViewController.store = store
         
         navigationController.viewControllers = [todosViewController]
