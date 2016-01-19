@@ -11,23 +11,24 @@ import SwiftFlow
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
+    var navigationController: UINavigationController {
+        return window!.rootViewController as! UINavigationController
+    }
+    
+    lazy var todosViewController: TodosViewController = {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TodosViewController") as! TodosViewController
+    }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let store = MainStore(reducer: TodosReducer(), appState: AppState())
-        TodosReducer().handleAction(store.appState as! AppState, action: AddTodo(text: "test"))
-        let todosViewController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewControllerWithIdentifier("TodosViewController") as! TodosViewController
+        store.dispatch(AddTodo(text: "test"))
         todosViewController.store = store
         
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = todosViewController
-        window?.makeKeyAndVisible()
+        navigationController.viewControllers = [todosViewController]
         
         return true
     }
 }
-
