@@ -14,7 +14,6 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
     var store: MainStore?
     var todos: [Todo] = []
     
-    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -26,7 +25,6 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Todo list"
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,4 +55,11 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
         cell.viewData = TodoTableViewCell.ViewData(todo: self.todos[indexPath.row])
 		return cell
 	}
+    
+    @IBAction func unwindFromAddController(segue: AddCompletionSegue) {
+        self.store?.dispatch(AddTodo(text: segue.todoText))
+    }
+    
+    @IBAction func unwindFromAddControllerForDismiss(segue: AddCompletionSegue) {
+    }
 }
