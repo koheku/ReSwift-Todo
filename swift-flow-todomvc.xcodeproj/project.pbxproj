@@ -144,9 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				EF4D05721C490908009BDAE9 /* AppDelegate.swift */,
-				EF4D05791C490908009BDAE9 /* Assets.xcassets */,
-				EF4D057E1C490908009BDAE9 /* Info.plist */,
-				EF4D05A41C490A27009BDAE9 /* swift-flow */,
+				EFEB21D61C4F9F4900ABF164 /* Resources */,
+				EF4D05A41C490A27009BDAE9 /* Swift-flow */,
 			);
 			path = "swift-flow-todomvc";
 			sourceTree = "<group>";
@@ -202,7 +201,7 @@
 			name = Store;
 			sourceTree = "<group>";
 		};
-		EF4D05A41C490A27009BDAE9 /* swift-flow */ = {
+		EF4D05A41C490A27009BDAE9 /* Swift-flow */ = {
 			isa = PBXGroup;
 			children = (
 				EF4D05A01C490A11009BDAE9 /* Actions */,
@@ -211,14 +210,12 @@
 				EF4D05A31C490A20009BDAE9 /* Store */,
 				EF4D05A51C490A40009BDAE9 /* View */,
 			);
-			name = "swift-flow";
+			name = "Swift-flow";
 			sourceTree = "<group>";
 		};
 		EF4D05A51C490A40009BDAE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */,
-				EF4D05761C490908009BDAE9 /* Main.storyboard */,
 				EF4D05A61C490AB9009BDAE9 /* TodosViewController.swift */,
 				EF0C751E1C4E42710014258F /* TodoTableViewCell.swift */,
 				EF93B3FB1C4E84C6009C29C5 /* AddPresentationSegue.swift */,
@@ -234,6 +231,25 @@
 				EF9F0C781C495B54002DAC53 /* TodosReducerTests.swift */,
 			);
 			name = Reducers;
+			sourceTree = "<group>";
+		};
+		EFEB21D61C4F9F4900ABF164 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D05791C490908009BDAE9 /* Assets.xcassets */,
+				EF4D057E1C490908009BDAE9 /* Info.plist */,
+				EFEB21D71C4F9F4E00ABF164 /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EFEB21D71C4F9F4E00ABF164 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */,
+				EF4D05761C490908009BDAE9 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
