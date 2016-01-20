@@ -21,13 +21,26 @@ class TodoTableViewCell: UITableViewCell {
     
     var viewData: ViewData? {
         didSet {
-            todoLabel.text = viewData?.text
-            checkboxButton.selected = (viewData?.completed)!
+            todoLabel.attributedText = self.todoAttributedText(viewData?.text, completed: viewData?.completed)
+            checkboxButton.selected = viewData?.completed ?? false
         }
     }
     
+    func todoAttributedText (text: String?, completed: Bool?) -> NSAttributedString {
+        guard let text = text, completed = completed else { return NSAttributedString() }
+        
+        let attributes: [String : AnyObject]
+        if completed {
+            attributes = [NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue]
+        } else {
+            attributes = [:]
+        }
+
+        return NSAttributedString(string: text, attributes: attributes)
+    }
+    
     @IBAction func checkboxTapped(sender: UIButton) {
-        self.viewData?.completeTodo((self.viewData?.id)!)
+        self.viewData?.completeTodo(self.viewData!.id)
     }
 }
 
