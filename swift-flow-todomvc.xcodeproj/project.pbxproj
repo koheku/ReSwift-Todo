@@ -10,7 +10,6 @@
 		074BDC7221FF7A4CF8AB8F64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593F7237DF492B273E39E88A /* Pods.framework */; };
 		EF0C751F1C4E42710014258F /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C751E1C4E42710014258F /* TodoTableViewCell.swift */; };
 		EF4D05731C490908009BDAE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05721C490908009BDAE9 /* AppDelegate.swift */; };
-		EF4D05781C490908009BDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05761C490908009BDAE9 /* Main.storyboard */; };
 		EF4D057A1C490908009BDAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4D05791C490908009BDAE9 /* Assets.xcassets */; };
 		EF4D057D1C490908009BDAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */; };
 		EF4D05931C490908009BDAE9 /* swift_flow_todomvcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05921C490908009BDAE9 /* swift_flow_todomvcUITests.swift */; };
@@ -22,6 +21,7 @@
 		EF93B3FC1C4E84C6009C29C5 /* AddPresentationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93B3FB1C4E84C6009C29C5 /* AddPresentationSegue.swift */; };
 		EF93B3FE1C4E84E0009C29C5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93B3FD1C4E84E0009C29C5 /* AddViewController.swift */; };
 		EF93B4001C4E8AD0009C29C5 /* AddCompletionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93B3FF1C4E8AD0009C29C5 /* AddCompletionSegue.swift */; };
+		EF93DC741C4FCF39006ED9BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF93DC721C4FCF39006ED9BA /* Main.storyboard */; };
 		EF9F0C761C49561B002DAC53 /* TodosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F0C751C49561B002DAC53 /* TodosState.swift */; };
 		EF9F0C791C495B54002DAC53 /* TodosReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F0C781C495B54002DAC53 /* TodosReducerTests.swift */; };
 		EF9F0C7A1C495C93002DAC53 /* TodosReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D05AC1C490DE9009BDAE9 /* TodosReducer.swift */; };
@@ -54,7 +54,6 @@
 		EF0C751E1C4E42710014258F /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTableViewCell.swift; path = "swift-flow/View/TodoTableViewCell.swift"; sourceTree = "<group>"; };
 		EF4D056F1C490908009BDAE9 /* swift-flow-todomvc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-flow-todomvc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D05721C490908009BDAE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF4D05771C490908009BDAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF4D05791C490908009BDAE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF4D057C1C490908009BDAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4D057E1C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		EF93B3FB1C4E84C6009C29C5 /* AddPresentationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPresentationSegue.swift; path = "swift-flow/View/AddPresentationSegue.swift"; sourceTree = "<group>"; };
 		EF93B3FD1C4E84E0009C29C5 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = "swift-flow/View/AddViewController.swift"; sourceTree = "<group>"; };
 		EF93B3FF1C4E8AD0009C29C5 /* AddCompletionSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompletionSegue.swift; sourceTree = "<group>"; };
+		EF93DC731C4FCF39006ED9BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF9F0C751C49561B002DAC53 /* TodosState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosState.swift; path = "swift-flow/Store/TodosState.swift"; sourceTree = "<group>"; };
 		EF9F0C781C495B54002DAC53 /* TodosReducerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosReducerTests.swift; path = Reducers/TodosReducerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,8 +246,8 @@
 		EFEB21D71C4F9F4E00ABF164 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EF93DC721C4FCF39006ED9BA /* Main.storyboard */,
 				EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */,
-				EF4D05761C490908009BDAE9 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -359,9 +359,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF93DC741C4FCF39006ED9BA /* Main.storyboard in Resources */,
 				EF4D057D1C490908009BDAE9 /* LaunchScreen.storyboard in Resources */,
 				EF4D057A1C490908009BDAE9 /* Assets.xcassets in Resources */,
-				EF4D05781C490908009BDAE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,20 +484,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF4D05761C490908009BDAE9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF4D05771C490908009BDAE9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF4D057B1C490908009BDAE9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EF4D057C1C490908009BDAE9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EF93DC721C4FCF39006ED9BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF93DC731C4FCF39006ED9BA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

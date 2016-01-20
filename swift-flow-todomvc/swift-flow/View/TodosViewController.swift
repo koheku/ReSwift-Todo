@@ -52,7 +52,10 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TodoTableViewCell
-        cell.viewData = TodoTableViewCell.ViewData(todo: self.todos[indexPath.row])
+        cell.viewData = TodoTableViewCell.ViewData(
+            todo: self.todos[indexPath.row],
+            completeTodo: { self.store?.dispatch(CompleteTodo(id: $0))}
+        )
 		return cell
 	}
     

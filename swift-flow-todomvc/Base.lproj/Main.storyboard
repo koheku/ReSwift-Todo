@@ -56,22 +56,44 @@
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="21b-as-5VM" style="IBUITableViewCellStyleDefault" id="XdQ-lZ-Dnj" customClass="TodoTableViewCell" customModule="swift_flow_todomvc" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="XdQ-lZ-Dnj" customClass="TodoTableViewCell" customModule="swift_flow_todomvc" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XdQ-lZ-Dnj" id="1E4-q0-Esq">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="21b-as-5VM">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMo-B3-TDC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="51" id="bF3-DK-PtP"/>
+                                                    </constraints>
+                                                    <state key="normal" image="radio-button"/>
+                                                    <state key="selected" image="radio-button-selected"/>
+                                                    <connections>
+                                                        <action selector="checkboxTapped:" destination="XdQ-lZ-Dnj" eventType="touchUpInside" id="8Om-ns-4I1"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Redux" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-KZ-xis">
+                                                    <rect key="frame" x="51" y="11" width="541" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cMo-B3-TDC" firstAttribute="top" secondItem="1E4-q0-Esq" secondAttribute="top" id="24J-sb-a19"/>
+                                                <constraint firstItem="cMo-B3-TDC" firstAttribute="leading" secondItem="1E4-q0-Esq" secondAttribute="leading" id="3FM-Yb-Ye8"/>
+                                                <constraint firstItem="mX8-KZ-xis" firstAttribute="centerY" secondItem="1E4-q0-Esq" secondAttribute="centerY" id="S1S-Tc-sqH"/>
+                                                <constraint firstItem="mX8-KZ-xis" firstAttribute="leading" secondItem="cMo-B3-TDC" secondAttribute="trailing" id="wpS-r7-Cn7"/>
+                                                <constraint firstAttribute="bottom" secondItem="cMo-B3-TDC" secondAttribute="bottom" id="yw9-AJ-Ho4"/>
+                                                <constraint firstItem="mX8-KZ-xis" firstAttribute="trailing" secondItem="1E4-q0-Esq" secondAttribute="trailingMargin" id="zyj-Cz-tie"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkboxButton" destination="cMo-B3-TDC" id="QUO-vA-g8g"/>
+                                            <outlet property="todoLabel" destination="mX8-KZ-xis" id="Lxf-wG-49w"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -189,4 +211,8 @@
             <point key="canvasLocation" x="1033" y="445"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="radio-button" width="24" height="24"/>
+        <image name="radio-button-selected" width="24" height="24"/>
+    </resources>
 </document>
