@@ -13,7 +13,7 @@ class TodoTableViewCell: UITableViewCell {
         let id: Int
         let text: String
         let completed: Bool
-        let completeTodo: (Int -> Void)
+        let completeTodo: ((id: Int) -> Void)
     }
     
     @IBOutlet weak var checkboxButton: UIButton!
@@ -40,12 +40,12 @@ class TodoTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkboxTapped(sender: UIButton) {
-        self.viewData?.completeTodo(self.viewData!.id)
+        self.viewData?.completeTodo(id: (self.viewData?.id)!)
     }
 }
 
 extension TodoTableViewCell.ViewData {
-    init(todo: Todo, completeTodo: (Int -> Void)) {
+    init(todo: Todo, completeTodo: ((id: Int) -> Void)) {
         self.id = todo.id
         self.text = todo.text
         self.completed = todo.completed

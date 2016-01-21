@@ -148,8 +148,8 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR5-MW-Bix">
                                 <rect key="frame" x="160" y="65" width="280" height="83"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvy-hS-OU8">
-                                        <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvy-hS-OU8">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="gUC-kQ-r4t"/>
                                         </constraints>
