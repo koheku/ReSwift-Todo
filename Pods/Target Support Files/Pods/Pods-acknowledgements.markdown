@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## SwiftFlow
+## ReSwift
 
 The MIT License (MIT)
 Copyright (c) 2015 Benjamin Encz

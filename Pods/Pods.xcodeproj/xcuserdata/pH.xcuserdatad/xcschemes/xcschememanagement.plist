@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftFlow.xcscheme</key>
+		<key>ReSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04BEA7E50AD9087E16AB89A90BADFAF9</key>
+		<key>343EF71FF5ED68F4F65B06DDC4AF1CFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>657C67603DAAD697B38976248DD7B99E</key>
+		<key>73D822638F7092CDD8F60492D634EAC8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

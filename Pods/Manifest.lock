@@ -1,10 +1,10 @@
 PODS:
-  - SwiftFlow (0.2.1)
+  - ReSwift (0.2.3)
 
 DEPENDENCIES:
-  - SwiftFlow
+  - ReSwift (~> 0.2.3)
 
 SPEC CHECKSUMS:
-  SwiftFlow: 9e6d7d777c65e6601068cdb0628c3fa365a48d64
+  ReSwift: 0912cea01daca9b8a2471bb7c3953773a112ea0b
 
 COCOAPODS: 0.39.0
