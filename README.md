@@ -2,4 +2,4 @@
 
 ReSwift-Todo is a simple todo list.
 
-It is an adapted version of Redux's ["todomvc" example](https://github.com/rackt/redux/tree/master/examples/todomvc) for [ReSwift](https://github.com/ReSwift/ReSwift).
+It is a [ReSwift](https://github.com/ReSwift/ReSwift) version of [Redux's todomvc](https://github.com/rackt/redux/tree/master/examples/todomvc).
