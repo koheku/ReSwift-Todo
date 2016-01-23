@@ -8,20 +8,31 @@
 
 import UIKit
 import ReSwift
+import Dwifft
 
 class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSource, UITableViewDelegate {
     
     var store: MainStore<AppState>?
-    var todos: [Todo] = []
+    var diffCalculator: TableViewDiffCalculator<Todo>?
+    var filteredTodos: [Todo] = [] {
+        didSet {
+            self.diffCalculator?.rows = filteredTodos
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    // MARK: UIViewController lifecycle
     
     override func loadView() {
         super.loadView()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.segmentedControl.addTarget(self, action: "segmentedControlValueChanged", forControlEvents: .ValueChanged)
+        self.diffCalculator = TableViewDiffCalculator(tableView: self.tableView, initialRows: self.filteredTodos)
+        self.diffCalculator?.insertionAnimation = UITableViewRowAnimation.Fade
+        self.diffCalculator?.deletionAnimation = UITableViewRowAnimation.Fade
     }
     
     override func viewDidLoad() {
@@ -36,19 +47,22 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
         self.store?.unsubscribe(self)
     }
     
+    // MARK: Store subscriber
+    
     func newState(state: AppState) {
+        self.filteredTodos = filteredTodosFromState(state)
+        self.segmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
+    }
+    
+    func filteredTodosFromState(state: AppState) -> [Todo] {
         switch (state.todosState.visibilityFilter) {
         case .All:
-            self.todos = state.todosState.todos
+            return state.todosState.todos
         case .Active:
-            self.todos = state.todosState.todos.filter() { return $0.completed == false
-        }
+            return state.todosState.todos.filter() { return $0.completed == false}
         case .Completed:
-            self.todos = state.todosState.todos.filter() { return $0.completed == true}
+            return state.todosState.todos.filter() { return $0.completed == true }
         }
-        
-        self.segmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
-        self.tableView.reloadData()
     }
     
     // MARK: Segmented control
@@ -63,21 +77,23 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
     // MARK: Table view datasource and delegate
     
 	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        self.store?.dispatch(DeleteTodo(id: self.todos[indexPath.row].id))
+        self.store?.dispatch(DeleteTodo(id: self.filteredTodos[indexPath.row].id))
 	}
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.todos.count
+        return self.filteredTodos.count
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TodoTableViewCell
         cell.viewData = TodoTableViewCell.ViewData(
-            todo: self.todos[indexPath.row],
+            todo: self.filteredTodos[indexPath.row],
             completeTodo: { self.store?.dispatch(CompleteTodo(id: $0))}
         )
 		return cell
 	}
+    
+    // MARK: Storyboard events
     
     @IBAction func unwindFromAddController(segue: AddCompletionSegue) {
         self.store?.dispatch(AddTodo(text: segue.todoText))

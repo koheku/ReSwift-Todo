@@ -182,13 +182,21 @@
 		EF83760B1C53D660007D4708 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF83761B1C53D929007D4708 /* AddCompletionSegue.swift */,
-				EF83760C1C53D660007D4708 /* AddPresentationSegue.swift */,
+				EF83763A1C543BF9007D4708 /* Segue */,
 				EF83760D1C53D660007D4708 /* AddViewController.swift */,
 				EF83760E1C53D660007D4708 /* TodosViewController.swift */,
 				EF83760F1C53D660007D4708 /* TodoTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EF83763A1C543BF9007D4708 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				EF83761B1C53D929007D4708 /* AddCompletionSegue.swift */,
+				EF83760C1C53D660007D4708 /* AddPresentationSegue.swift */,
+			);
+			name = Segue;
 			sourceTree = "<group>";
 		};
 		EF9F0C771C495B36002DAC53 /* Reducers */ = {

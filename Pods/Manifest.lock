@@ -1,10 +1,13 @@
 PODS:
+  - Dwifft (0.2)
   - ReSwift (0.2.3)
 
 DEPENDENCIES:
+  - Dwifft (~> 0.2)
   - ReSwift (~> 0.2.3)
 
 SPEC CHECKSUMS:
+  Dwifft: 34b83e721ced31ab8f780031eaf0ef96d541ad0b
   ReSwift: 0912cea01daca9b8a2471bb7c3953773a112ea0b
 
 COCOAPODS: 0.39.0
