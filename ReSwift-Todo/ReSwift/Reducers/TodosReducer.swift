@@ -57,6 +57,10 @@ struct TodosReducer: Reducer {
             state.todosState.todos = state.todosState.todos.filter() { $0.completed == false }
             return state
             
+        case let action as SetVisibilityFilter:
+            state.todosState.visibilityFilter = action.visibilityFilter
+            return state
+            
         default:
             return state
         }

@@ -21,6 +21,7 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
         super.loadView()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.segmentedControl.addTarget(self, action: "segmentedControlValueChanged", forControlEvents: .ValueChanged)
     }
     
     override func viewDidLoad() {
@@ -36,8 +37,27 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
     }
     
     func newState(state: AppState) {
-        self.todos = state.todosState.todos
+        switch (state.todosState.visibilityFilter) {
+        case .All:
+            self.todos = state.todosState.todos
+        case .Active:
+            self.todos = state.todosState.todos.filter() { return $0.completed == false
+        }
+        case .Completed:
+            self.todos = state.todosState.todos.filter() { return $0.completed == true}
+        }
+        
+        self.segmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
         self.tableView.reloadData()
+    }
+    
+    // MARK: Segmented control
+    
+    func segmentedControlValueChanged() {
+        guard let visibilityFilter = VisibilityFilter(rawValue: self.segmentedControl.selectedSegmentIndex)
+        else { return }
+        
+        self.store?.dispatch(SetVisibilityFilter(visibilityFilter: visibilityFilter))
     }
     
     // MARK: Table view datasource and delegate

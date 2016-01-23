@@ -42,3 +42,9 @@ struct ClearCompleted: Action {
     
     static let type = "CLEAR_COMPLETED"
 }
+
+struct SetVisibilityFilter: Action {
+    
+    static let type = "SET_VISIBILITY_FILTER"
+    let visibilityFilter: VisibilityFilter
+}

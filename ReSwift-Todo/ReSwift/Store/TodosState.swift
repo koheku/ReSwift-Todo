@@ -14,6 +14,12 @@ struct Todo {
     var id: Int
 }
 
+enum VisibilityFilter: Int {
+    case All
+    case Active
+    case Completed
+}
+
 extension Todo: Equatable {}
 
 func ==(lhs: Todo, rhs: Todo) -> Bool {
@@ -22,6 +28,7 @@ func ==(lhs: Todo, rhs: Todo) -> Bool {
 
 struct TodosState {
     var todos: [Todo] = []
+    var visibilityFilter: VisibilityFilter = .All
 }
 
 protocol HasTodosState {

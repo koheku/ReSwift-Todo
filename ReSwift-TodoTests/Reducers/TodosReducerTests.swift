@@ -12,7 +12,7 @@ import ReSwift
 extension HasTodosState {
     init(_ todos: [Todo]) {
         self.init()
-        self.todosState = TodosState(todos: todos)
+        self.todosState = TodosState(todos: todos, visibilityFilter: .All)
     }
 }
 
@@ -188,5 +188,28 @@ class TodosReducerTests: XCTestCase {
             [Todo(text: "todo 2", completed: false, id: 1),
                 Todo(text: "todo 3", completed: false, id: 2)])
         
+    }
+    
+    // MARK: SET_VISIBILITY_FILTER
+    
+    func testDefaultVisibilityFilter() {
+        
+        // Given
+        let state = AppState()
+        
+        // Then
+        XCTAssert(state.todosState.visibilityFilter == .All)
+    }
+    
+    func testSetVisibilityFilter() {
+        
+        // Given
+        let state = AppState()
+        
+        // When
+        let result = TodosReducer().handleAction(state, action: SetVisibilityFilter(visibilityFilter: .Active))
+        
+        // Then
+        XCTAssert(result.todosState.visibilityFilter == .Active)
     }
 }
