@@ -21,22 +21,16 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
     }
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     
     // MARK: UIViewController lifecycle
     
     override func loadView() {
         super.loadView()
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.segmentedControl.addTarget(self, action: "segmentedControlValueChanged", forControlEvents: .ValueChanged)
+        self.filterSegmentedControl.addTarget(self, action: "filterValueChanged", forControlEvents: .ValueChanged)
         self.diffCalculator = TableViewDiffCalculator(tableView: self.tableView, initialRows: self.filteredTodos)
         self.diffCalculator?.insertionAnimation = UITableViewRowAnimation.Fade
         self.diffCalculator?.deletionAnimation = UITableViewRowAnimation.Fade
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,8 +44,9 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
     // MARK: Store subscriber
     
     func newState(state: AppState) {
+        // The filteredTodos setter triggers the Dwifft diffing (which triggers the animated table view updates)
         self.filteredTodos = filteredTodosFromState(state)
-        self.segmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
+        self.filterSegmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
     }
     
     func filteredTodosFromState(state: AppState) -> [Todo] {
@@ -65,16 +60,16 @@ class TodosViewController: UIViewController, StoreSubscriber, UITableViewDataSou
         }
     }
     
-    // MARK: Segmented control
+    // MARK: Filter segmented control
     
-    func segmentedControlValueChanged() {
-        guard let visibilityFilter = VisibilityFilter(rawValue: self.segmentedControl.selectedSegmentIndex)
+    func filterValueChanged() {
+        guard let visibilityFilter = VisibilityFilter(rawValue: self.filterSegmentedControl.selectedSegmentIndex)
         else { return }
         
         self.store?.dispatch(SetVisibilityFilter(visibilityFilter: visibilityFilter))
     }
     
-    // MARK: Table view datasource and delegate
+    // MARK: UITableViewDataSource, UITableViewDelegate
     
 	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         self.store?.dispatch(DeleteTodo(id: self.filteredTodos[indexPath.row].id))

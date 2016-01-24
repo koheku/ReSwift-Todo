@@ -29,14 +29,14 @@ class AddPresentationSegue: UIStoryboardSegue, UIViewControllerTransitioningDele
             let addView = transitionContext.viewForKey(UITransitionContextToViewKey)
             addView!.alpha = 0
             transitionContext.containerView()!.addSubview(addView!)
-            UIView.animateWithDuration(0.4, animations: {
+            UIView.animateWithDuration(0.25, animations: {
                 addView!.alpha = 1.0
                 }, completion: { didComplete in
                     transitionContext.completeTransition(didComplete)
             })
         } else if transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) is AddViewController {
             let addView = transitionContext.viewForKey(UITransitionContextFromViewKey)
-            UIView.animateWithDuration(0.4, animations: {
+            UIView.animateWithDuration(0.25, animations: {
                 addView!.alpha = 0.0
                 }, completion: { didComplete in
                     transitionContext.completeTransition(didComplete)
@@ -45,6 +45,6 @@ class AddPresentationSegue: UIStoryboardSegue, UIViewControllerTransitioningDele
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.4
+        return 0.25
     }
 }

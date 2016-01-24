@@ -74,7 +74,7 @@
                                                         <action selector="checkboxTapped:" destination="XdQ-lZ-Dnj" eventType="touchUpInside" id="8Om-ns-4I1"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Redux" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-KZ-xis">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try ReSwift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-KZ-xis">
                                                     <rect key="frame" x="51" y="11" width="541" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,6 +96,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WjC-So-WA3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="irm-s2-hgb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -118,7 +122,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="segmentedControl" destination="s4Q-Cd-93t" id="xRN-1D-ksw"/>
+                        <outlet property="filterSegmentedControl" destination="s4Q-Cd-93t" id="9SY-BB-xfI"/>
                         <outlet property="tableView" destination="qdx-uU-TiT" id="3Ef-fC-cph"/>
                     </connections>
                 </viewController>
@@ -160,7 +164,7 @@
                                                         <segue destination="dGa-e2-c7v" kind="unwind" customClass="AddCompletionSegue" customModule="ReSwift_Todo" customModuleProvider="target" unwindAction="unwindFromAddControllerForDismiss:" id="R6W-6B-agO"/>
                                                     </connections>
                                                 </barButtonItem>
-                                                <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="vSF-O9-PZE">
+                                                <barButtonItem key="rightBarButtonItem" title="Create" style="done" id="vSF-O9-PZE">
                                                     <connections>
                                                         <segue destination="dGa-e2-c7v" kind="unwind" customClass="AddCompletionSegue" customModule="ReSwift_Todo" customModuleProvider="target" unwindAction="unwindFromAddController:" id="jFI-h3-FRk"/>
                                                     </connections>

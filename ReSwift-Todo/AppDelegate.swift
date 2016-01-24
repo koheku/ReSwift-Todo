@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         store.dispatch(AddTodo(text: "Buy milk"))
         store.dispatch(AddTodo(text: "Play Mario Tennis"))
         store.dispatch(AddTodo(text: "Find work"))
-        store.dispatch(CompleteTodo(id: 1))
-        store.dispatch(CompleteTodo(id: 3))
+        store.dispatch(CompleteTodo(id: 0))
+        store.dispatch(CompleteTodo(id: 2))
         todosViewController.store = store
         
         navigationController.viewControllers = [todosViewController]
