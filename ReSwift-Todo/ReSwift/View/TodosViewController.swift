@@ -13,8 +13,7 @@ import Dwifft
 class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource, ASTableDelegate {
     
     var store: MainStore<AppState>?
-    var tableView: ASTableView
-    var filterSegmentedControl: UISegmentedControl
+    let node = TodosViewControllerNode()
     var diffCalculator: TableViewDiffCalculator<Todo>?
     var filteredTodos: [Todo] = [] {
         didSet {
@@ -23,13 +22,10 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     }
     
     override required init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        self.tableView = ASTableView()
-        self.filterSegmentedControl = UISegmentedControl(items: ["All", "Active", "Completed"])
-        
         super.init(nibName: nil, bundle: nil)
         
-        self.tableView.asyncDelegate = self
-        self.tableView.asyncDataSource = self
+        self.node.tableView.asyncDataSource = self
+        self.node.tableView.asyncDelegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,25 +36,26 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     
     override func loadView() {
         super.loadView()
-        self.filterSegmentedControl.addTarget(self, action: "filterValueChanged", forControlEvents: .ValueChanged)
-        self.tableView.reloadData()
+        self.view.addSubview(self.node.view)
         
-        self.diffCalculator = TableViewDiffCalculator(tableView: self.tableView, initialRows: self.filteredTodos)
+        self.node.filterSegmentedControl.addTarget(self, action: "filterValueChanged", forControlEvents: .ValueChanged)
+        self.node.tableView.reloadData()
+        
+        self.diffCalculator = TableViewDiffCalculator(tableView: self.node.tableView, initialRows: self.filteredTodos)
         self.diffCalculator?.insertionAnimation = UITableViewRowAnimation.Fade
         self.diffCalculator?.deletionAnimation = UITableViewRowAnimation.Fade
-        
-        self.view.addSubview(self.filterSegmentedControl)
-        self.view.addSubview(self.tableView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Todo list"
+        self.edgesForExtendedLayout = .None;
     }
     
     override func viewWillLayoutSubviews() {
-        let size = self.view.bounds.size
-        self.filterSegmentedControl.frame = CGRectMake(0, 100, size.width, 40)
-        self.tableView.frame = CGRectMake(0, 140, size.width, size.height-140)
+        let sizeRange = ASSizeRangeMake(self.view.bounds.size, self.view.bounds.size)
+        let size = self.node.measureWithSizeRange(sizeRange).size
+        self.node.frame = CGRect(origin: CGPoint(), size: size)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -74,7 +71,7 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     func newState(state: AppState) {
         // The filteredTodos setter triggers the Dwifft diffing (which triggers the animated table view updates)
         self.filteredTodos = filteredTodosFromState(state)
-        self.filterSegmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
+        self.node.filterSegmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
     }
     
     func filteredTodosFromState(state: AppState) -> [Todo] {
@@ -91,8 +88,8 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     // MARK: Filter segmented control
     
     func filterValueChanged() {
-        guard let visibilityFilter = VisibilityFilter(rawValue: self.filterSegmentedControl.selectedSegmentIndex)
-        else { return }
+        guard let visibilityFilter = VisibilityFilter(rawValue: self.node.filterSegmentedControl.selectedSegmentIndex)
+            else { return }
         
         self.store?.dispatch(SetVisibilityFilter(visibilityFilter: visibilityFilter))
     }
