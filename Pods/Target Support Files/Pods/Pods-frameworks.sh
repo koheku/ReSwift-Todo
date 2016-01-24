@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AsyncDisplayKit.framework"
   install_framework "Pods/Dwifft.framework"
   install_framework "Pods/ReSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AsyncDisplayKit.framework"
   install_framework "Pods/Dwifft.framework"
   install_framework "Pods/ReSwift.framework"
 fi

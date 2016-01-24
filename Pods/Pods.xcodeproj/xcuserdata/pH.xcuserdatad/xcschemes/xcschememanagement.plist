@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AsyncDisplayKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Dwifft.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>343EF71FF5ED68F4F65B06DDC4AF1CFD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>6EACCA611D3C843D78C62B6E601E0044</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73D822638F7092CDD8F60492D634EAC8</key>
+		<key>AF69AE11B27093C625C0E6BEE85AD430</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>853DF506373E5B310D6FE260F827CDCE</key>
+		<key>E1AEDB88A8DE671B6E691B41DF55D365</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8A0ED48B30F7B252FD6C7FFED6DF32C</key>
+		<key>E3C239ACAF5101186BCC509051AC4986</key>
 		<dict>
 			<key>primary</key>
 			<true/>
