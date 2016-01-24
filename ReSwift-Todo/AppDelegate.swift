@@ -13,12 +13,12 @@ import ReSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    var navigationController: UINavigationController {
-        return window!.rootViewController as! UINavigationController
-    }
+    lazy var navigationController: UINavigationController = {
+        return UINavigationController()
+    }()
     
     lazy var todosViewController: TodosViewController = {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TodosViewController") as! TodosViewController
+        return TodosViewController(nibName: nil, bundle: nil)
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -32,7 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         store.dispatch(CompleteTodo(id: 2))
         todosViewController.store = store
         
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window.backgroundColor = UIColor.whiteColor()
+        window.rootViewController = navigationController
         navigationController.viewControllers = [todosViewController]
+        window.makeKeyAndVisible()
+        self.window = window
         
         return true
     }

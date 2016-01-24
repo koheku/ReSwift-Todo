@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		074BDC7221FF7A4CF8AB8F64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593F7237DF492B273E39E88A /* Pods.framework */; };
+		EF651B6C1C5546D100015216 /* TodosViewControllerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF651B6B1C5546D100015216 /* TodosViewControllerNode.swift */; };
 		EF8376101C53D660007D4708 /* TodosActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376041C53D660007D4708 /* TodosActions.swift */; };
 		EF8376111C53D660007D4708 /* TodosReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376061C53D660007D4708 /* TodosReducer.swift */; };
 		EF8376121C53D660007D4708 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376081C53D660007D4708 /* AppState.swift */; };
@@ -20,7 +21,6 @@
 		EF83761A1C53D7D1007D4708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376191C53D7D1007D4708 /* AppDelegate.swift */; };
 		EF83761C1C53D929007D4708 /* AddCompletionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83761B1C53D929007D4708 /* AddCompletionSegue.swift */; };
 		EF8376211C53D959007D4708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF83761D1C53D959007D4708 /* LaunchScreen.storyboard */; };
-		EF8376221C53D959007D4708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF83761F1C53D959007D4708 /* Main.storyboard */; };
 		EF8376241C53D9A3007D4708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8376231C53D9A3007D4708 /* Assets.xcassets */; };
 		EF83762C1C53DB79007D4708 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376081C53D660007D4708 /* AppState.swift */; };
 		EF83762D1C53DB7C007D4708 /* TodosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83760A1C53D660007D4708 /* TodosState.swift */; };
@@ -47,6 +47,7 @@
 		EF4D056F1C490908009BDAE9 /* ReSwift-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReSwift-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D057E1C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "ReSwift-Todo/Info.plist"; sourceTree = "<group>"; };
 		EF4D05831C490908009BDAE9 /* ReSwift-Todo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwift-Todo.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF651B6B1C5546D100015216 /* TodosViewControllerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosViewControllerNode.swift; path = ASDK/TodosViewControllerNode.swift; sourceTree = "<group>"; };
 		EF8376041C53D660007D4708 /* TodosActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosActions.swift; sourceTree = "<group>"; };
 		EF8376061C53D660007D4708 /* TodosReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosReducer.swift; sourceTree = "<group>"; };
 		EF8376081C53D660007D4708 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		EF8376191C53D7D1007D4708 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "ReSwift-Todo/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		EF83761B1C53D929007D4708 /* AddCompletionSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompletionSegue.swift; sourceTree = "<group>"; };
 		EF83761E1C53D959007D4708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "ReSwift-Todo/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
-		EF8376201C53D959007D4708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "ReSwift-Todo/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		EF8376231C53D9A3007D4708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "ReSwift-Todo/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		EF8376311C53DBA7007D4708 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF9F0C781C495B54002DAC53 /* TodosReducerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodosReducerTests.swift; path = Reducers/TodosReducerTests.swift; sourceTree = "<group>"; };
@@ -141,6 +141,14 @@
 			path = "ReSwift-TodoTests";
 			sourceTree = "<group>";
 		};
+		EF651B5F1C55347B00015216 /* ASDK */ = {
+			isa = PBXGroup;
+			children = (
+				EF651B6B1C5546D100015216 /* TodosViewControllerNode.swift */,
+			);
+			name = ASDK;
+			sourceTree = "<group>";
+		};
 		EF8376021C53D660007D4708 /* ReSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +190,7 @@
 		EF83760B1C53D660007D4708 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF651B5F1C55347B00015216 /* ASDK */,
 				EF83763A1C543BF9007D4708 /* Segue */,
 				EF83760D1C53D660007D4708 /* AddViewController.swift */,
 				EF83760E1C53D660007D4708 /* TodosViewController.swift */,
@@ -213,7 +222,6 @@
 				EF8376231C53D9A3007D4708 /* Assets.xcassets */,
 				EF4D057E1C490908009BDAE9 /* Info.plist */,
 				EF83761D1C53D959007D4708 /* LaunchScreen.storyboard */,
-				EF83761F1C53D959007D4708 /* Main.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -302,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8376221C53D959007D4708 /* Main.storyboard in Resources */,
 				EF8376241C53D9A3007D4708 /* Assets.xcassets in Resources */,
 				EF8376211C53D959007D4708 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -375,6 +382,7 @@
 				EF8376151C53D660007D4708 /* AddPresentationSegue.swift in Sources */,
 				EF8376161C53D660007D4708 /* AddViewController.swift in Sources */,
 				EF8376181C53D660007D4708 /* TodoTableViewCell.swift in Sources */,
+				EF651B6C1C5546D100015216 /* TodosViewControllerNode.swift in Sources */,
 				EF8376171C53D660007D4708 /* TodosViewController.swift in Sources */,
 				EF8376101C53D660007D4708 /* TodosActions.swift in Sources */,
 				EF8376111C53D660007D4708 /* TodosReducer.swift in Sources */,
@@ -414,14 +422,6 @@
 				EF83761E1C53D959007D4708 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		EF83761F1C53D959007D4708 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF8376201C53D959007D4708 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -521,6 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.reswift-todo";
 				PRODUCT_NAME = "ReSwift-Todo";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -535,6 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.koheku.reswift-todo";
 				PRODUCT_NAME = "ReSwift-Todo";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
