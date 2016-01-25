@@ -10,7 +10,7 @@ import AsyncDisplayKit
 
 class TodosViewControllerNode: ASDisplayNode {
     
-    let tableNode: ASTableNode
+    let tableNode: ASTableNode = ASTableNode()
     let filterSegmentedControlNode = ASDisplayNode { () -> UIView in
         return UISegmentedControl(items: ["All", "Active", "Completed"])
     }
@@ -20,6 +20,13 @@ class TodosViewControllerNode: ASDisplayNode {
     }
     var tableView: ASTableView {
         return tableNode.view as ASTableView
+    }
+    
+    override init() {
+        super.init()
+        
+        self.addSubnode(self.filterSegmentedControlNode)
+        self.addSubnode(self.tableNode)
     }
     
     override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -36,18 +43,9 @@ class TodosViewControllerNode: ASDisplayNode {
             children: [segmentedControlLayoutSpec, self.tableNode]
         )
         
-        self.filterSegmentedControlNode.preferredFrameSize = CGSizeMake(0, 40)
+        self.filterSegmentedControlNode.preferredFrameSize = CGSizeMake(0, 35)
         self.tableNode.flexGrow = true
         
         return stackLayoutSpec
-    }
-    
-    override init() {
-        self.tableNode = ASTableNode()
-        
-        super.init()
-        
-        self.addSubnode(self.filterSegmentedControlNode)
-        self.addSubnode(self.tableNode)
     }
 }

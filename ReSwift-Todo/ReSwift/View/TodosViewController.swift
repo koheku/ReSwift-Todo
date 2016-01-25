@@ -53,6 +53,7 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     }
     
     override func viewWillLayoutSubviews() {
+        // measureWithSizeRange() calculates the node layout
         let sizeRange = ASSizeRangeMake(self.view.bounds.size, self.view.bounds.size)
         let size = self.node.measureWithSizeRange(sizeRange).size
         self.node.frame = CGRect(origin: CGPoint(), size: size)
@@ -97,8 +98,11 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     // MARK: ASTableDataSource, ASTableDelegate
     
     func tableView(tableView: ASTableView, nodeForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNode {
-        let node = ASTextCellNode()
-        node.text = self.filteredTodos[indexPath.row].text
+        let node = TodoTableViewCellNode()
+        node.viewData = TodoTableViewCellNode.ViewData(
+            todo: self.filteredTodos[indexPath.row],
+            completeTodo: { self.store?.dispatch(CompleteTodo(id: $0)) }
+        )
         
         return node
     }
@@ -114,13 +118,4 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
 	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         self.store?.dispatch(DeleteTodo(id: self.filteredTodos[indexPath.row].id))
 	}
-
-//	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TodoTableViewCell
-//        cell.viewData = TodoTableViewCell.ViewData(
-//            todo: self.filteredTodos[indexPath.row],
-//            completeTodo: { self.store?.dispatch(CompleteTodo(id: $0))}
-//        )
-//		return cell
-//	}
 }

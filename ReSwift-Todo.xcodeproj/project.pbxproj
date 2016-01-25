@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		074BDC7221FF7A4CF8AB8F64 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593F7237DF492B273E39E88A /* Pods.framework */; };
+		EF385AFB1C56828E009EC6F1 /* TodoTableViewCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF385AFA1C56828E009EC6F1 /* TodoTableViewCellNode.swift */; };
 		EF651B6C1C5546D100015216 /* TodosViewControllerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF651B6B1C5546D100015216 /* TodosViewControllerNode.swift */; };
 		EF8376101C53D660007D4708 /* TodosActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376041C53D660007D4708 /* TodosActions.swift */; };
 		EF8376111C53D660007D4708 /* TodosReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376061C53D660007D4708 /* TodosReducer.swift */; };
@@ -17,7 +18,6 @@
 		EF8376151C53D660007D4708 /* AddPresentationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83760C1C53D660007D4708 /* AddPresentationSegue.swift */; };
 		EF8376161C53D660007D4708 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83760D1C53D660007D4708 /* AddViewController.swift */; };
 		EF8376171C53D660007D4708 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83760E1C53D660007D4708 /* TodosViewController.swift */; };
-		EF8376181C53D660007D4708 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83760F1C53D660007D4708 /* TodoTableViewCell.swift */; };
 		EF83761A1C53D7D1007D4708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8376191C53D7D1007D4708 /* AppDelegate.swift */; };
 		EF83761C1C53D929007D4708 /* AddCompletionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF83761B1C53D929007D4708 /* AddCompletionSegue.swift */; };
 		EF8376211C53D959007D4708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF83761D1C53D959007D4708 /* LaunchScreen.storyboard */; };
@@ -44,6 +44,7 @@
 		593F7237DF492B273E39E88A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B5D2F7D5205269086983B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9A86C126FA1335645DE4D49F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EF385AFA1C56828E009EC6F1 /* TodoTableViewCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTableViewCellNode.swift; path = ASDK/TodoTableViewCellNode.swift; sourceTree = "<group>"; };
 		EF4D056F1C490908009BDAE9 /* ReSwift-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReSwift-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D057E1C490908009BDAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "ReSwift-Todo/Info.plist"; sourceTree = "<group>"; };
 		EF4D05831C490908009BDAE9 /* ReSwift-Todo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwift-Todo.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +57,6 @@
 		EF83760C1C53D660007D4708 /* AddPresentationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPresentationSegue.swift; sourceTree = "<group>"; };
 		EF83760D1C53D660007D4708 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		EF83760E1C53D660007D4708 /* TodosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
-		EF83760F1C53D660007D4708 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		EF8376191C53D7D1007D4708 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "ReSwift-Todo/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		EF83761B1C53D929007D4708 /* AddCompletionSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompletionSegue.swift; sourceTree = "<group>"; };
 		EF83761E1C53D959007D4708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "ReSwift-Todo/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -145,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				EF651B6B1C5546D100015216 /* TodosViewControllerNode.swift */,
+				EF385AFA1C56828E009EC6F1 /* TodoTableViewCellNode.swift */,
 			);
 			name = ASDK;
 			sourceTree = "<group>";
@@ -194,7 +195,6 @@
 				EF83763A1C543BF9007D4708 /* Segue */,
 				EF83760D1C53D660007D4708 /* AddViewController.swift */,
 				EF83760E1C53D660007D4708 /* TodosViewController.swift */,
-				EF83760F1C53D660007D4708 /* TodoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,7 +381,6 @@
 				EF83761C1C53D929007D4708 /* AddCompletionSegue.swift in Sources */,
 				EF8376151C53D660007D4708 /* AddPresentationSegue.swift in Sources */,
 				EF8376161C53D660007D4708 /* AddViewController.swift in Sources */,
-				EF8376181C53D660007D4708 /* TodoTableViewCell.swift in Sources */,
 				EF651B6C1C5546D100015216 /* TodosViewControllerNode.swift in Sources */,
 				EF8376171C53D660007D4708 /* TodosViewController.swift in Sources */,
 				EF8376101C53D660007D4708 /* TodosActions.swift in Sources */,
@@ -389,6 +388,7 @@
 				EF8376121C53D660007D4708 /* AppState.swift in Sources */,
 				EF83761A1C53D7D1007D4708 /* AppDelegate.swift in Sources */,
 				EF8376141C53D660007D4708 /* TodosState.swift in Sources */,
+				EF385AFB1C56828E009EC6F1 /* TodoTableViewCellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
