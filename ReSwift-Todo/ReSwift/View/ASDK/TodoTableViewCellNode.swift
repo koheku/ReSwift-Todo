@@ -14,7 +14,7 @@ class TodoTableViewCellNode: ASCellNode {
         let id: Int
         let text: String
         let completed: Bool
-        let completeTodo: ((id: Int) -> Void)
+        let dispatchCompleteTodo: ((id: Int) -> Void)
     }
     
     let checkbox: RadioButtonNode = RadioButtonNode()
@@ -55,7 +55,7 @@ class TodoTableViewCellNode: ASCellNode {
     }
     
     func checkboxTapped() {
-        self.viewData?.completeTodo(id: self.viewData!.id)
+        self.viewData?.dispatchCompleteTodo(id: self.viewData!.id)
     }
 }
 
@@ -98,10 +98,10 @@ extension NSAttributedString {
 }
 
 extension TodoTableViewCellNode.ViewData {
-    init(todo: Todo, completeTodo: ((id: Int) -> Void)) {
+    init(todo: Todo, dispatchCompleteTodo: ((id: Int) -> Void)) {
         self.id = todo.id
         self.text = todo.text
         self.completed = todo.completed
-        self.completeTodo = completeTodo
+        self.dispatchCompleteTodo = dispatchCompleteTodo
     }
 }

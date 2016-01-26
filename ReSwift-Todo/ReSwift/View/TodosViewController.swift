@@ -23,9 +23,6 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     
     override required init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nil, bundle: nil)
-        
-        self.node.tableView.asyncDataSource = self
-        self.node.tableView.asyncDelegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -39,6 +36,8 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
         self.view.addSubview(self.node.view)
         
         self.node.filterSegmentedControl.addTarget(self, action: "filterValueChanged", forControlEvents: .ValueChanged)
+        self.node.tableView.asyncDataSource = self
+        self.node.tableView.asyncDelegate = self
         self.node.tableView.reloadData()
         
         self.diffCalculator = TableViewDiffCalculator(tableView: self.node.tableView, initialRows: self.filteredTodos)
@@ -53,7 +52,7 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     }
     
     override func viewWillLayoutSubviews() {
-        // measureWithSizeRange() calculates the node layout
+        // measureWithSizeRange() calculates the node layout (ASDK)
         let sizeRange = ASSizeRangeMake(self.view.bounds.size, self.view.bounds.size)
         let size = self.node.measureWithSizeRange(sizeRange).size
         self.node.frame = CGRect(origin: CGPoint(), size: size)
@@ -70,7 +69,8 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
     // MARK: Store subscriber
     
     func newState(state: AppState) {
-        // The filteredTodos setter triggers the Dwifft diffing (which triggers the animated table view updates)
+        // The filteredTodos setter triggers the Dwifft diffing
+        // (which triggers the animated table view updates)
         self.filteredTodos = filteredTodosFromState(state)
         self.node.filterSegmentedControl.selectedSegmentIndex = state.todosState.visibilityFilter.rawValue
     }
@@ -101,7 +101,7 @@ class TodosViewController: UIViewController, StoreSubscriber, ASTableDataSource,
         let node = TodoTableViewCellNode()
         node.viewData = TodoTableViewCellNode.ViewData(
             todo: self.filteredTodos[indexPath.row],
-            completeTodo: { self.store?.dispatch(CompleteTodo(id: $0)) }
+            dispatchCompleteTodo: { self.store?.dispatch(CompleteTodo(id: $0)) }
         )
         
         return node
